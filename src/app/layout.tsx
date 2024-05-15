@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import dynamic from "next/dynamic";
 import Sidemenu from "@/components/sidemenu";
 import styles from './page.module.scss'
+import { Suspense } from "react";
 // dynamic(import("bootstrap/dist/js/bootstrap.bundle.min.js" as string), { ssr: false });
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,7 +24,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className={styles.main} >
-        <Sidemenu />
+          <Suspense>
+            <Sidemenu />
+          </Suspense>
         <div className={styles.content} >
           {children}
         </div>
