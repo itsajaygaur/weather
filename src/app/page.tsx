@@ -44,7 +44,7 @@ export default async function Home({
         </div>
 
         <div className={styles["today-forecast"]}>
-          <p className={styles["forecast-heading"]}>TODAY'S FORECAST</p>
+          <p className={styles["forecast-heading"]}>TODAY&apos;S FORECAST</p>
           <div className={styles["today-forecast-wrapper"]}>
             {weather.hourly.map(
               (

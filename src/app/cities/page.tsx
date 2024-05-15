@@ -47,7 +47,7 @@ export default async function Cities({searchParams}: {searchParams: {city: strin
                 </div>
 
                 <div className={styles['today-forecast']} >
-                    <p className={styles['forecast-heading']} >TODAY'S FORECAST</p>
+                    <p className={styles['forecast-heading']} >TODAY&apos;S FORECAST</p>
                     <div className={styles['today-forecast-wrapper']} >
                         {
                         weather.hourly.slice(0, 3).map((item: {time: string, temperature: string, weatherCode: string}, index: number) => {
