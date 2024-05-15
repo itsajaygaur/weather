@@ -1,0 +1,160 @@
+.cities{
+    flex-basis: 65%;
+}
+
+.weather-info{
+    // flex-basis: 35%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.city-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.city-wrapper{
+    width: 100%;
+    background: var(--card-background);
+    border-radius: var(--card-radius);
+    height: 120px;
+    padding: 20px;
+    padding-inline: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    >div{
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    h3{
+        color: gray;
+    }
+
+    p{
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+
+.city-weather{
+    padding: 40px;
+    flex-basis: 35%;
+
+    h2{
+      margin-bottom: 50px;
+      font-weight: bold;
+    }
+
+    h3{
+      font-weight: bold;
+      font-size: 40px;
+    }
+  }
+
+  .today-forecast{
+    // background: var(--card-background);
+    padding: 20px;
+    border-radius: var(--card-radius);
+    width: 100%;
+
+    .forecast-heading{
+      color: gray;
+      font-weight: bold;
+    }
+
+
+  .today-forecast-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 12px;
+
+    // > div:not(:first-child){
+    //     border-left: 2px solid red;
+    // }
+      .time{
+        color: gray;
+        font-weight: 500;
+      }
+    .temperature{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+  }
+}
+
+.threeday-forecast{
+    flex-basis: 35%;
+    // background: var(--card-background);
+    // height: 100%;
+    border-radius: var(--card-radius);
+    padding: 30px;
+    // margin-top: 10px;
+    .forecast-heading{
+        color: gray;
+        font-weight: bold;
+    }
+
+    .threeday-forecast-wrapper{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .threeday-forecast-info{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+
+      > div{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+
+      }
+      .time{
+        flex: 1;
+        color: gray;
+        font-weight: 500;
+      }
+
+      .weather-description{
+        font-size: x-small;
+      }
+
+      .temperature{
+        flex: 1;
+        text-align: end;
+        font-weight: bold;
+        .min-temp{
+          color: gray;
+        }
+      }
+
+    }
+
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .city-weather{
+      padding: 5px;
+    }
+
+    .city-wrapper{
+      padding-inline: 10px;
+    }
+  }
